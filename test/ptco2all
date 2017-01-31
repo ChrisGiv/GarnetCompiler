@@ -1,0 +1,5 @@
+#!/bin/csh
+foreach i (*.pt)
+    echo "=== $i"
+    ptc -o2 $i
+end

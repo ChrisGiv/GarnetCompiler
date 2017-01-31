@@ -1,0 +1,8 @@
+#!/bin/csh
+foreach i (*.pt)
+    echo "=== $i ==="
+    ptc $i
+    ${i:r}.out
+    /bin/rm -f ${i:r}.out
+end
+echo "=== ==="
