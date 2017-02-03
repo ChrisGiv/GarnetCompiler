@@ -31,6 +31,16 @@ case
 while
 repeat
 
+% new for phase 1
+% using
+% val
+% def
+% unless
+% elsif
+% break
+% when
+% module
+
 % End of keywords
 
 % Predeclared identifiers

@@ -78,7 +78,15 @@ Output :
 	pCase
 	pWhile
 	pRepeat
-	lastKeywordToken = pRepeat
+	% pUsing
+	% pVal
+	% pDef
+	% pUnless
+	% pElsif
+	% pBreak
+	% pWhen
+	% pModule
+	lastKeywordToken = pRepeat %pModule
 
 	% Scanner tokens -
 	%   These are the tokens actually recognized by the Scanner itself.
@@ -114,7 +122,14 @@ Output :
 	pLeftBracket
 	pRightBracket
 	pDotDot
-	lastSyntaxToken = pDotDot;
+	% new for phase 1
+	pSlash
+	pOrBar
+	pHash
+	pExclamation
+	pDollar
+	pPercent
+	lastSytaxToken = pPercent;
 
 Error :
 	eIllegalChar = 5
@@ -221,6 +236,19 @@ Scan :
 	    | lNewPage:
 	    | lEndFile:
 		.pEndFile
+	    % new for phase 1
+	    | lSlash:
+        	.pSlash
+	    | lOrBar:
+	        .pOrBar
+            | lHash:
+	 	.pHash
+	    | lExclamation:
+	        .pExclamation
+	    | lDollar:
+        	.pDollar
+	    | lPercent:
+        	.pPercent
 	    | *:
 		?
 		#eIllegalChar

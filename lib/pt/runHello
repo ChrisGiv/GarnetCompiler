@@ -1,0 +1,2 @@
+ssltrace “ptc -o1 -t1 -L . hello.pt” ~/cisc458/ptsrc/parser/scan.def –e
+
