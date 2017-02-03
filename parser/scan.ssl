@@ -40,7 +40,13 @@ Input :
 	lTab
 	lNewPage 
 	lEndFile
-	lastCharClass = lEndFile;
+	lSlash		'/'
+	lOrBar		'|'
+	lHash		'#'
+	lExclamation 	'!'	
+	lDollar		'$'
+	lPercent	'%'
+	lastCharClass = lPercent;
 
 Output :
 	% Keyword tokens -

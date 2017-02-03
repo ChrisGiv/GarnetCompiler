@@ -28,7 +28,13 @@
 	lTab = 22;
 	lNewPage = 23;
 	lEndFile = 24;
-	lastCharClass = 24;
+	lSlash = 25;
+	lOrBar = 26;
+	lHash = 27;
+	lExclamation = 28;
+	lDollar = 29;
+	lPercent = 30;
+	lastCharClass = 30;
 
 	{ Output Tokens }
 	pDiv = 0;

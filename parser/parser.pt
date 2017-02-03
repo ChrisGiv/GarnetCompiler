@@ -75,8 +75,13 @@ program ScannerParser(output, stdIdentifiers, scanSsl, parseSsl, source,
 	lTab = 22;
 	lNewPage = 23;
 	lEndFile = 24;
-	lastCharClass = 24;
-
+	lSlash = 25;
+	lOrBar = 26;
+	lHash = 27;
+	lExclamation = 28;
+	lDollar = 29;
+	lPercent = 30;
+	lastCharClass = 30;
 { ===== }
 
 
@@ -320,7 +325,7 @@ program ScannerParser(output, stdIdentifiers, scanSsl, parseSsl, source,
 	{ misc. }
 	tab = '	';
 	blank = ' ';
-	quote = '''';
+	quote = '"';
 	null = 0;
 
 	{ Phase identification values - for use by common routines }
@@ -817,6 +822,13 @@ program ScannerParser(output, stdIdentifiers, scanSsl, parseSsl, source,
 	    charClassMap[ord(']')] := lRightBracket;
 	    charClassMap[ord('{')] := lLeftBrace;
 	    charClassMap[ord('}')] := lRightBrace;
+	    charClassMap[ord('/')] := lSlash;
+	    charClassMap[ord('|')] := lOrBar;
+	    charClassMap[ord('#')] := lHash;
+	    charClassMap[ord('!')] := lExclamation;
+	    charClassMap[ord('$')] := lDollar;
+	    charClassMap[ord('%')] := lPercent;
+
 
 	    { Initialize the scan ssl table }
 	    reset(scanSsl {, NscanSsl} );
@@ -1665,8 +1677,13 @@ program ScannerParser(output, stdIdentifiers, scanSsl, parseSsl, source,
     { Main program ScannerParser }
     begin
 	Initialize;
-	Parser;
+	{Parser;}
 	{ No sense running semantic phase if serious syntax errors found }
-	if errorCount > 0 then
-	    rewrite(parseStream {, NparseStream} );
+	{if errorCount > 0 then}
+	    {rewrite(parseStream, NparseStream );}
+	parseInputToken := pNewLine;
+	newInputLine := false;
+
+	while parseInputToken <> pEndFile do
+    		AcceptSyntaxToken;
     end.  { ScannerParser }

@@ -1,0 +1,8 @@
+/
+
+program HelloWorld ( output );
+
+begin
+	write('suh dude');
+	writeln;
+end.
