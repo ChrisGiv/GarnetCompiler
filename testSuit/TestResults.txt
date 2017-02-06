@@ -1,0 +1,130 @@
+Test 1 File testFiles/characterClasses.pt
+
+Show trace of accepted input only
+ [ (lHash)
+ [ (lExclamation)
+ [ (lIllegal)
+ ? (lIllegal)
+ [ (lDollar)
+ [ (lPercent)
+  [ (lNewLine)
+Show trace of emitted output only
+ .pHash
+ .pExclamation
+ .pDollar
+  .pNewLine
+
+**************************
+Test 2 File testFiles/charIsDeleted.pt
+
+Show trace of accepted input only
+ [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lNewLine)
+ [ (lNewLine)
+Show trace of emitted output only
+  .pIdentifier
+ .pNewLine
+
+**************************
+Test 3 File testFiles/newComments.pt
+
+Show trace of accepted input only
+ [ (lPercent)
+  [ (lBlank)
+  ? (lBlank)
+  [ (lLetter)
+  ? (lLetter)
+  [ (lLetter)
+  ? (lLetter)
+  [ (lNewLine)
+Show trace of emitted output only
+  .pNewLine
+
+**************************
+Test 4 File testFiles/newKeywords.pt
+
+Show trace of accepted input only
+ [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lNewLine)
+ [ (lNewLine)
+Show trace of emitted output only
+  .pIdentifier
+ .pNewLine
+
+**************************
+Test 5 File testFiles/newQuote.pt
+
+Show trace of accepted input only
+ [ (lQuote)
+  [ (lQuote)
+  [ (lNewLine)
+ [ (lNewLine)
+Show trace of emitted output only
+  .pLiteral
+ .pNewLine
+
+**************************
+Test 6 File testFiles/oldComments.pt
+
+Show trace of accepted input only
+ [ (lLeftBrace)
+ ? (lLeftBrace)
+ [ (lLetter)
+  [ (lLetter)
+  [ (lRightBrace)
+ [ (lRightBrace)
+ ? (lRightBrace)
+ [ (lNewLine)
+Show trace of emitted output only
+  .pIdentifier
+ .pNewLine
+
+**************************
+Test 7 File testFiles/oldKeywords.pt
+
+Show trace of accepted input only
+ [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lNewLine)
+ [ (lNewLine)
+Show trace of emitted output only
+  .pIdentifier
+ .pNewLine
+
+**************************
+Test 8 File testFiles/oldQuote.pt
+
+Show trace of accepted input only
+ [ (lIllegal)
+ ? (lIllegal)
+ [ (lIllegal)
+ ? (lIllegal)
+ [ (lNewLine)
+Show trace of emitted output only
+ .pNewLine
+
+**************************
+Test 9 File testFiles/stringIsAdded.pt
+
+Show trace of accepted input only
+ [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lNewLine)
+ [ (lNewLine)
+Show trace of emitted output only
+  .pIdentifier
+ .pNewLine
+
+**************************
